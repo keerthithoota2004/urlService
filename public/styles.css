@@ -1,0 +1,263 @@
+/* Base styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family: "Raleway", sans-serif;
+    background: #f4f6f9; /* Slightly off-white for a subtle background */
+    color: #37474f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+/* Header */
+.header {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background: linear-gradient(135deg, #3d52a0, #7091E6);
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+    position: fixed;
+    top: 0;
+}
+
+.header:hover {
+    background: linear-gradient(135deg, #7091E6, #3d52a0);
+}
+
+/* Container for welcome text and buttons */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+    width: 100%;
+    max-width: 600px; /* Adjust as needed */
+    padding: 20px;
+    background: #ADBBDA; /* Light background color */
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Welcome text styling */
+.container h1 {
+    font-size: 2.5rem;
+    color: #3d52a0; /* Dark blue color for text */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Button styling (for both Create Short URL and Short URLs buttons) */
+.url-button, .short-url-button {
+    display: inline-block;
+    padding: 12px 20px;
+    color: #fff;
+    background: #7091E6; /* Medium blue color */
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s, box-shadow 0.3s;
+    margin: 10px; /* Space between buttons */
+    text-align: center;
+}
+
+.url-button:hover, .short-url-button:hover {
+    background: #3d52a0; /* Darker blue color on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.url-button:active, .short-url-button:active {
+    background: #2c3e8c; /* Even darker blue for active state */
+    transform: translateY(1px);
+}
+
+/* Form styling */
+.form {
+    padding: 40px 30px;
+    max-width: 500px;
+}
+
+.form:hover {
+    transform: scale(1.03);
+}
+
+.form > div {
+    margin-bottom: 20px;
+}
+
+.form-element input,
+.form-element button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #bdbdbd;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.form-element input:focus {
+    border-color: #7091E6; /* Change border color to match button */
+    box-shadow: 0 0 8px rgba(112, 145, 230, 0.4); /* Match input focus shadow */
+    outline: none;
+}
+
+.form-element button {
+    background: #7091E6; /* Button background color */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+.form-element button:hover {
+    background: #3d52a0; /* Darker blue color on hover */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Result section */
+.result {
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+    font-weight: 600;
+    color: #3d52a0;
+}
+
+.result a {
+    color: #3d52a0;
+    text-decoration: none;
+}
+
+.result a:hover {
+    color: #7091E6;
+    text-decoration: underline;
+}
+
+/* Navigation styling */
+.navigation {
+    margin-top: 20px;
+}
+
+.navigation a {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #ffffff;
+    background: #3d52a0; /* Dark blue background */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+.navigation a:hover {
+    background: #7091E6; /* Medium blue color on hover */
+    transform: translateY(-2px);
+}
+
+/* List styling */
+.list h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #3d52a0; /* Dark blue color for headings */
+    font-weight: bold;
+}
+
+.list table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.list table thead {
+    background: #3d52a0; /* Dark blue background for header */
+    color: #fff;
+    font-weight: bold;
+}
+
+.list table thead th,
+.list table tbody td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.list table tbody tr:nth-child(odd) {
+    background-color: #f4f6f9; /* Light grayish background for odd rows */
+}
+
+.list table tbody tr:nth-child(even) {
+    background-color: #ffffff; /* White background for even rows */
+}
+
+.list table tbody tr:hover {
+    background-color: #e0e7ff; /* Very light blue on hover */
+}
+
+/* Back link styling */
+.back-link {
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    color: #3d52a0;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border: 2px solid #3d52a0;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.back-link:hover {
+    background: #3d52a0;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container, .form {
+        width: 90%;
+        padding: 15px;
+    }
+}
+.boxing {
+    width: 350px;
+    height: 450px;
+    background: #ADBBDA; /* Box color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    position: relative;
+    margin: 100px auto; /* Centers the box horizontally */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers content inside the box */
+}
+h2{
+    font-family: 'Times New Roman', Times, serif;
+    color:#3d52a0;
+}
